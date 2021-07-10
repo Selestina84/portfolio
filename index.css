@@ -1,11 +1,43 @@
 body{
- background: url('img/background.jpg') no-repeat 100%/cover;
+
  font-family: Roboto;
 }
+#video-bg {
+ position: fixed;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ overflow: hidden;
+
+ background-size: cover;
+}
+
+#video-bg > video {
+ position: absolute;
+ top: 0;
+ left: 0;
+ min-width: 100%; 
+ min-height: 100%;
+ width: auto;
+ height: auto; 
+}
+
+@supports (object-fit: cover) {
+  #video-bg > video {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
 .container{
+ position: relative;
  width: 100%;
  max-width: 980px;
  margin: 0 auto;
+ z-index: 11;
 }
 .wrapper{
  padding: 20px;
@@ -15,51 +47,64 @@ body{
 }
 .item{
  width: 100%;
- background-color: rgba(255, 255, 255, 0.2);
+ background-color: rgba(173, 216, 234, 0.1);
  padding: 20px;
  box-sizing: border-box;
  border-radius: 30px;
- box-shadow: 0px 5px 18px 8px rgba(34, 60, 80, 0.5);
+ box-shadow: inset 0px 0px 6px 4px rgba(173, 216, 234, 0.8);
 
 }
 .item__img{
- width: 80%;
+ width: 70%;
  display: block;
- margin: 0 auto 20px auto;
+ margin: 0 auto 10px auto;
  border-radius: 10px;
  transition: all .6s ease;
 }
 .item__img:hover{
  transform: scale(1.02);
- box-shadow: 0px 5px 18px 8px rgba(34, 60, 80, 0.5);
+ box-shadow: 0px 0px 6px 2px rgba(174, 251, 252, 0.8);
 }
 .item__title{
  text-align: center;
- color: #aefbfc;
- text-shadow: 2px 2px 3px #101731;
+ color: #101731;
+ text-shadow: 0px 0px 3px #BED1EC;
+ font-weight: 900;
  font-size: 32px;
- margin: 0 auto 20px auto;
+ margin: 0 auto 10px auto;
 }
-.item__descr{
+.item__desr{
+ font-size: 14px;
+ margin: 0;
  text-align: center;
- color:#020018;
+ color:  #BED1EC;
+
 }
 .item__link{
  display: block;
  text-align: center;
- margin: 0 auto 15px auto;
+ margin: 10px auto 0 auto;
  text-decoration: none;
  text-align: center;
- color: #34c1c4;
+ color: #7DDEF2;
  text-shadow: 2px 2px 3px #101731;
- font-size: 18px;
+ font-size: 16px;
+ transition: all .4s ease-in-out;
 }
 .item__link:hover{
- color: #2aa3a5;
+ color: #60a9b8;
+ transform: scale(1.02);
 }
 .title{
  text-align: center;
- color: #aefbfc;
- text-shadow: 2px 2px 3px #101731;
+ color: #101731;
+ text-shadow: 0px 0px 4px #BED1EC;
  font-size: 45px;
+ margin: 20px auto;
 }
+ @media(max-width:670px){
+ .wrapper{
+  padding: 15px;
+  grid-template: repeat(8, 1fr) /  1fr;
+ }
+} 
