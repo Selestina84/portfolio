@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
- <title>Портфолио
- </title>
- <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <title>Портфолио
+  </title>
+  <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
   <div id="video-bg">
-    <video width="100%" height="auto" preload="auto" autoplay="autoplay"
-    loop="loop" >
-        <source src="img/150355060660c38c0de784a9f4.mp4" type="video/mp4"></source>
-        <source src="img/150355060660c38c0de784a9f4.webm" type="video/webm"></source>
+    <video width="100%" height="auto" preload="auto" autoplay="autoplay" muted loop="loop">
+      <source src="img/150355060660c38c0de784a9f4.mp4" type="video/mp4">
+      </source>
+      <source src="img/150355060660c38c0de784a9f4.webm" type="video/webm">
+      </source>
     </video>
-</div>
- <div class="container">
-  <h1 class="title">Портфолио</h1>
-  <div class="wrapper">
-   <article class="item">
-    <a href="https://selestina84.github.io/GardenSity/"><img src="img/gardensity.png" alt="фото сайта GardenSity" class="item__img"></a>
-  
-     <h3 class="item__title">GardenSity</h3>
-     <p class="item__desr">Небольшой лендинг для торгового центра.При верстке использовались следующие технологии - методология <b>БЭМ, CSS-grid, CSS-flex</b>, препроцессор <b>SASS</b>, для сборки проекта использован <b>GULP</b> </p>
-     <a href="https://selestina84.github.io/GardenSity/" class="item__link">Посмотреть лендинг</a>
-     <a href="https://github.com/Selestina84/GardenSity" class="item__link">Ссылка на Git Repository с исходным кодом</a>
- 
-    
-   </article>
-   <article class="item">
-    <a href="https://selestina84.github.io/indeVets/"><img src="img/indevets.png" alt="фото сайта IndeVets" class="item__img"></a>
-  
-     <h3 class="item__title">IndeVets</h3>
-    <p class="item__desr">Небольшой лендинг для фирмы, занимающейся повышением квалификации ветеринаров.При верстке использовались следующие технологии - методология <b>БЭМ, CSS-grid, CSS-flex</b>, препроцессор <b>SASS</b>, для сборки проекта использован <b>GULP</b></p>
-    <a href="https://selestina84.github.io/indeVets/" class="item__link">Посмотреть лендинг</a>
-   <a href="https://github.com/Selestina84/indeVets" class="item__link">Ссылка на Git Repository с исходным кодом</a>
-
-    
-   </article>
-   <article class="item">
-    <img src="" alt="" class="item__img">
-    <div class="item__wrap">
-     <h3 class="item__title"></h3>
-    <p class="item__desr"></p>
-    <a href="" class="item__link">Ссылка на готовую страничку на GitHub Pages</a>
-    <p class="item__text">Ссылка на Git Repository с исходным кодом<a href="" class="item__linkgit"></a></p>
-    </div>
-   </article>
-   <article class="item">
-    <img src="" alt="" class="item__img">
-    <div class="item__wrap">
-     <h3 class="item__title"></h3>
-    <p class="item__desr"></p>
-    <a href="" class="item__link">Ссылка на готовую страничку на GitHub Pages</a>
-    <p class="item__text">Ссылка на Git Repository с исходным кодом<a href="" class="item__linkgit"></a></p>
-    </div>
-   </article>
   </div>
- </div>
+  <div class="container">
+    <h1 class="title">Портфолио</h1>
+    <div class="wrapper">
+      <article class="item">
+        <div class="item__front">
+         <img src="img/gardensity.png" alt="фото сайта GardenSity"
+            class="item__img">
+
+        <h3 class="item__title">GardenSity</h3>
+        </div>
+      <div class="item__back">
+        <h3 class="item__title">GardenSity</h3>
+        <p class="item__desr">Небольшой лендинг для торгового центра.При верстке использовались следующие технологии -
+          методология <b>БЭМ, CSS-grid, CSS-flex</b>, препроцессор <b>SASS</b>, для сборки проекта использован
+          <b>GULP</b> </p>
+        <a href="https://selestina84.github.io/GardenSity/" class="item__link">Посмотреть лендинг</a>
+        <a href="https://github.com/Selestina84/GardenSity" class="item__link">Ссылка на Git Repository с исходным
+          кодом</a>
+      </div>
+      
+
+
+      </article>
+      <article class="item">
+        <div class="item__front">
+         <img src="img/indevets.png" alt="фото сайта IndeVets"
+            class="item__img">
+
+        <h3 class="item__title">IndeVets</h3>
+        </div>
+       <div class="item__back">
+        <h3 class="item__title">IndeVets</h3>
+        <p class="item__desr">Небольшой лендинг для фирмы, занимающейся повышением квалификации ветеринаров.При верстке
+          использовались следующие технологии - методология <b>БЭМ, CSS-grid, CSS-flex</b>, препроцессор <b>SASS</b>,
+          для сборки проекта использован <b>GULP</b></p>
+        <a href="https://selestina84.github.io/indeVets/" class="item__link">Посмотреть лендинг</a>
+        <a href="https://github.com/Selestina84/indeVets" class="item__link">Ссылка на Git Repository с исходным
+          кодом</a>
+       </div>
+       
+
+
+      </article>
+      <!--  <article class="item">
+    <img src="" alt="" class="item__img">
+    <div class="item__wrap">
+     <h3 class="item__title"></h3>
+    <p class="item__desr"></p>
+    <a href="" class="item__link">Ссылка на готовую страничку на GitHub Pages</a>
+    <p class="item__text">Ссылка на Git Repository с исходным кодом<a href="" class="item__linkgit"></a></p>
+    </div>
+   </article>
+   <article class="item">
+    <img src="" alt="" class="item__img">
+    <div class="item__wrap">
+     <h3 class="item__title"></h3>
+    <p class="item__desr"></p>
+    <a href="" class="item__link">Ссылка на готовую страничку на GitHub Pages</a>
+    <p class="item__text">Ссылка на Git Repository с исходным кодом<a href="" class="item__linkgit"></a></p>
+    </div>
+   </article> -->
+    </div>
+  </div>
 </body>
+
 </html>

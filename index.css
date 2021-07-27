@@ -1,6 +1,5 @@
 body{
-
- font-family: Roboto;
+  font-family: 'Roboto Mono', monospace;
 }
 #video-bg {
  position: fixed;
@@ -42,18 +41,42 @@ body{
 .wrapper{
  padding: 20px;
  display: grid;
- grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+ grid-template: repeat(2, 1fr) / repeat(2, 1fr);
  gap: 30px;
 }
 .item{
  width: 100%;
- background-color: rgba(173, 216, 234, 0.1);
- padding: 20px;
- box-sizing: border-box;
- border-radius: 30px;
- box-shadow: inset 0px 0px 6px 4px rgba(173, 216, 234, 0.8);
+ min-height: 300px;
+
+
+ position: relative;
+ perspective: 1000px;
 
 }
+.item__front,
+.item__back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background-color: rgba(173, 216, 234, 0.1);
+  box-shadow: inset 0px 0px 6px 4px rgba(173, 216, 234, 0.8);
+}
+.item__back{
+  transform: rotateY(180deg);
+}
+.item:hover .item__front {transform: rotateY(180deg);}
+.item:hover .item__back {transform: rotateY(360deg);}
 .item__img{
  width: 70%;
  display: block;
@@ -61,10 +84,7 @@ body{
  border-radius: 10px;
  transition: all .6s ease;
 }
-.item__img:hover{
- transform: scale(1.02);
- box-shadow: 0px 0px 6px 2px rgba(174, 251, 252, 0.8);
-}
+
 .item__title{
  text-align: center;
  color: #101731;
@@ -96,12 +116,38 @@ body{
  transform: scale(1.02);
 }
 .title{
+  width: 9ch;
  text-align: center;
  color: #101731;
  text-shadow: 0px 0px 4px #BED1EC;
- font-size: 45px;
+ font-size: 48px;
+ line-height: 48px;
  margin: 20px auto;
+ font-family:  monospace;
+ white-space: nowrap;
+ overflow: hidden;
+ border-right: 3px solid #BED1EC;
+ animation: cursor 0.8s step-end infinite,
+            printedText 1.5s steps(9);
 }
+@keyframes cursor{
+ 0%{
+   border-color: #BED1EC;
+ }
+ 50%{
+  border-color: transparent;
+}
+ 100%{
+  border-color: #BED1EC;
+}
+}
+@keyframes printedText{
+ from{
+   width: 0;
+ }
+}
+
+
  @media(max-width:670px){
  .wrapper{
   padding: 15px;
